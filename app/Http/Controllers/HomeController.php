@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -31,11 +31,10 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $cate = Category::all();
         $cate_index = Category::where('is_index', 1)->orderBy('created_at', 'DESC')->get();
         $post_large = Post::orderBy('created_at', 'DESC')->first();
         $posts = Post::orderBy('created_at', 'desc')->take(3)->skip(1)->get();
-        return view('front-end.index', compact('cate', 'posts', 'post_large','cate_index'));
+        return view('front-end.index', array_merge($this->common_var(),['posts'=> $posts, 'post_large' => $post_large,'cate_index'=> $cate_index]));
     }
     public function category($slug) {
         $cate = Category::where('slug', $slug)->first();

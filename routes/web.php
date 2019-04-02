@@ -46,7 +46,6 @@ Route::group(['namespace' => 'Auth'], function () {
 });
 
 // Redirect to /dashboard
-Route::get('/home', 'HomeController@index')->name('home');
 
 /**
  * Requires authentication.

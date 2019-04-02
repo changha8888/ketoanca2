@@ -96,3 +96,17 @@ function menuMulti ($data,$parent_id = 0,$str="---|",$select=0) {
         }
     }
 }
+function menuMultiIndex ($data,$parent_id = 0,$str="---|",$select=0) {
+    foreach ($data as $val) {
+        $id = $val["id"];
+        $name = $val["name"];
+        if ($val["parent_id"] == $parent_id) {
+            if ($select != 0 && $id == $select) {
+                echo '<li class=""><a href="{{url($item->slug)}}">{{$item->name}}</a></li>';
+            } else {
+                echo '<option value="'.$id.'">'.$str." ".$name.'</option>';
+            }
+            menuMultiIndex ($data,$id,$str." ---|",$select);
+        }
+    }
+}
