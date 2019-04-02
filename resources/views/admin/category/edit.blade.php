@@ -46,14 +46,29 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-7">
+                        <div class="col-md-7" style="margin-top: 10px">
                             <div class="col-md-12">
-                                <div class="form-group margin-b-5 margin-t-5">
-                                    <label for="name">Description</label>
-                                    <textarea class="form-control" rows="5" name="description" >{{$data->description}}</textarea>
-
-                                </div>
+                                <label for="name">Danh mục cha</label>
+                                <select name="cate_id" class="form-control">
+                                    <option value="0">--- ROOT ---</option>
+                                    <?php menuMulti ($cate,0,$str="—",$data->parent_id) ?>
+                                </select>
                                 <!-- /.form-group -->
+                            </div>
+                        </div>
+                         <div class="col-md-7" style="margin-top: 20px">
+                            <div class="col-md-12">
+                                @if($data->is_index)
+                                <label>
+                                  <input type="checkbox" name="is_index" value="1" checked>
+                                  Hiển thị trang chủ
+                                </label>
+                                @else
+                                <label>
+                                  <input type="checkbox" name="is_index" value="1">
+                                  Hiển thị trang chủ
+                                </label>
+                                @endif
                             </div>
                         </div>
                         

@@ -29,7 +29,8 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th>Danh mục cha</th>
+                            <th>Hiển thị trang chủ</th>
                             <th style="width: 120px;">Actions</th>
                         </tr>
                     </thead>
@@ -42,7 +43,13 @@
                             <td class="table-text">
                                 {{$item->name}}
                             </td>
-                            <td>{{$item->description}}</td>
+                            
+                            <td>{{$item->parent['name']}}</td>
+                            @if($item->is_index == 1)
+                            <td><span class="success"><i class="glyphicon glyphicon-check"></i></span></td>
+                            @else
+                            <td></td>
+                            @endif
 
                             <!-- we will also add show, edit, and delete buttons -->
                             <td>

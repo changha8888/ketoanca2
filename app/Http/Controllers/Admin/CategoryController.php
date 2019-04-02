@@ -29,14 +29,16 @@ class CategoryController extends Controller
       $cate->parent_id = $request->cate_id;
    	$cate->status = 1;
    	$cate->slug = str_slug($request->name);
+      $cate->is_index = isset($request->is_index) ? 1 : 0;
    	$cate->save();
       Toastr::success('Thêm thành công', 'Category', ["positionClass" => "toast-top-right"]);
    	return redirect('cks-admin/category/list');
    }
    public function getEdit($id) {
+      $cate = Category::select('id','name','parent_id')->get()->toArray();
       $data = Category::find($id);
       if($data){
-         return view('admin.category.edit', compact('data'));
+         return view('admin.category.edit', compact('cate','data'));
       }
    }
    public function postEdit(Request $request, $id) {
@@ -48,6 +50,8 @@ class CategoryController extends Controller
       $cate = Category::findOrFail($id);
       if($cate) {
          $cate->name = $request->name;
+         $cate->parent_id = $request->cate_id;
+         $cate->is_index = isset($request->is_index) ? 1 : 0;
          $cate->save();
       }
       Toastr::success('Sửa thành công', 'Category', ["positionClass" => "toast-top-right"]);

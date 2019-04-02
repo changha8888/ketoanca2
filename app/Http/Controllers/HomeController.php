@@ -32,16 +32,22 @@ class HomeController extends Controller
     public function index()
     {
         $cate = Category::all();
-        return view('front-end.master', compact('cate'));
+        $cate_index = Category::where('is_index', 1)->orderBy('created_at', 'DESC')->get();
+        $post_large = Post::orderBy('created_at', 'DESC')->first();
+        $posts = Post::orderBy('created_at', 'desc')->take(3)->skip(1)->get();
+        return view('front-end.index', compact('cate', 'posts', 'post_large','cate_index'));
     }
     public function category($slug) {
-        $data = Post::where('slug', $slug)->get();
-        return view('front-end.category.index', array_merge($this->common_var(),['data'=>$data]));
+        $cate = Category::where('slug', $slug)->first();
+        if($cate){
+            $posts = Post::where('cat_id', $cate->id)->orderBy('created_at', 'DESC')
+                ->paginate(10);
+            }
+        return view('front-end.category.index', array_merge($this->common_var(),['posts'=>$posts]));
     }
-    public function post()
+    public function post($slug)
     {
-        $id = 22;
-        $data = Post::find($id);
-        return view('front-end.post.index', compact('data'));
+        $post = Post::where('slug', $slug)->first();
+        return view('front-end.post.index', array_merge($this->common_var(),['post'=>$post]));
     }
 }

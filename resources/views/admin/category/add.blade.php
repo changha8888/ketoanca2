@@ -56,6 +56,14 @@
                                 <!-- /.form-group -->
                             </div>
                         </div>
+                         <div class="col-md-7" style="margin-top: 20px">
+                            <div class="col-md-12">
+                                <label>
+                                  <input type="checkbox" name="is_index" value="1">
+                                  Hiển thị trang chủ
+                                </label>
+                            </div>
+                        </div>
                         
                     </div>
                     <!-- /.box-body -->

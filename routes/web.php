@@ -102,4 +102,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/{slug}', 'HomeController@category');
-Route::get('/post/{slug}', 'HomeController@post')->name('home');
+Route::get('/post-detail/{slug}', 'HomeController@post');
