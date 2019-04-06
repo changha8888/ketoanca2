@@ -25,10 +25,18 @@ class HomeController extends Controller
      */
     public function common_var () {
         $cate = Category::all();
+        $list_news = Post::orderBy('created_at', 'desc')->take(6)->get();
         $result = array(
-            "cate"=>$cate);
+            "cate"=>$cate, 'list_news' => $list_news);
         return $result;
     }
+    public function list_news () {
+        $list_news = Post::orderBy('created_at', 'desc')->take(6)->get();
+        $result = array(
+            "list_news"=>$cate);
+        return $result;
+    }
+
     public function index()
     {
         $cate_index = Category::where('is_index', 1)->orderBy('created_at', 'DESC')->get();

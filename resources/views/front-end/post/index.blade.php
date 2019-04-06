@@ -187,4 +187,5 @@
         </div>
     </div>
 </div>
+@include('front-end.common.list_new')
 @endsection

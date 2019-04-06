@@ -1201,3 +1201,10 @@ textarea:focus {
         font-size: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 940px !important;
+  }
+}
+
