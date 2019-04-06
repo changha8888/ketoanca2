@@ -55,6 +55,8 @@ class HomeController extends Controller
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->first();
-        return view('front-end.post.index', array_merge($this->common_var(),['post'=>$post]));
+        $cat_id = $post->cat_id;
+        $related = Post::where('id', '!=', $post->id)->where('cat_id', '=', $post->cat_id)->take(4)->get();
+        return view('front-end.post.index', array_merge($this->common_var(),['post'=>$post, 'related'=> $related]));
     }
 }

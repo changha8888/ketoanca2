@@ -11,7 +11,7 @@
                 <a href="{{url('/post-detail/'.$item->slug)}}" class="post-title">
                     <h6>{{$item->name}}</h6>
                 </a>
-                <p class="post-date"><span>7:00 AM</span> | <span>April 14</span></p>
+                <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p>
             </div>
         </div>
     </div>
