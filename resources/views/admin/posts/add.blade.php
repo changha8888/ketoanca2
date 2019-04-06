@@ -54,6 +54,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="name" class="">Bài viết nổi bật</label>
+                                <div class="">
+                                    <input type="checkbox" name="is_index" value="1">
+                                </div>
+                            </div>
+                            <div class="form-group">
                               <label for="exampleInputFile">Ảnh bài viết</label>
                               <input type="file" id="exampleInputFile" name="images">
                             </div>

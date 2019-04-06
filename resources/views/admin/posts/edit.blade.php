@@ -54,6 +54,20 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="name" class="">Bài viết nổi bật</label>
+                                <div class="">
+                                    @if($data->is_index)
+                                    <label>
+                                      <input type="checkbox" name="is_index" value="1" checked>
+                                    </label>
+                                    @else
+                                    <label>
+                                      <input type="checkbox" name="is_index" value="1">
+                                    </label>
+                                    @endif
+                                    </div>
+                            </div>
+                            <div class="form-group">
                                 <span class="form_label">Hình hiện tại:</span>
                             <span class="form_item">
                                 <img src="{{url('uploads/news').'/'.$data->images}}" width="100px" />

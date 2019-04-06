@@ -40,6 +40,7 @@ class PostController extends Controller
         $post->slug = str_slug($request->name);
         $post->keywords = '1';
         $post->tag = '1';
+        $post->is_index = isset($request->is_index) ? 1 : 0;
         if (strlen($file) > 0) {
             $filename = time().'.'.$file->getClientOriginalName();
             $destinationPath = 'uploads/news/';
@@ -70,6 +71,7 @@ class PostController extends Controller
         $post->slug = str_slug($request->name);
         $post->keywords = '1';
         $post->tag = '1';
+        $post->is_index = isset($request->is_index) ? 1 : 0;
         if (strlen($file) > 0) {
             $fImageCurrent = $request->images;
             if (file_exists(public_path().'/uploads/news/'.$fImageCurrent)) {
