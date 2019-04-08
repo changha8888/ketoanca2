@@ -1,6 +1,7 @@
 @extends('front-end.master')
 @section('content')
 <div class="col-12 col-lg-8">
+@if(count($posts) > 0)
 <div class="blog-posts-area">
     @foreach($posts as $post)
     <div class="single-blog-post featured-post mb-30">
@@ -23,19 +24,14 @@
         </div>
     </div>
     @endforeach
-    <nav aria-label="Page navigation example">
-        <ul class="pagination mt-50">
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">10</a></li>
-        </ul>
-    </nav>
+    {{$posts->links('front-end.pagination')}}
+    
 </div>
-
+@else
+<div class="blog-posts-area">
+   <p>Hiện chưa có bài viết nào</p>
+</div>
+@endif
 </div>
 @include('front-end.common.list_new')
 @endsection

@@ -9,7 +9,14 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Ketoanca2</title>
+    <title>@yield('title')</title> 
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta property="og:type" content="article" /> 
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:image" content="@yield('seo_image')" >
+    <meta property="og:description" content="@yield('seo_description')" >
+    <meta property="og:url" content="@yield('seo_url')" />
 
     <!-- Favicon -->
     <link rel="icon" href="{{asset('/newspaper/img/core-img/favicon.ico')}}">
@@ -76,29 +83,27 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul>
+                                <ul class="dropdown">
                                     <li class=""><a href="{{url('/')}}">Home</a></li>
                                     @foreach($cate as $item)
-                                    <li class=""><a href="{{url($item->slug)}}">{{$item->name}}</a></li>
-                                    @endforeach
-                                    <!-- <li><a href="#">Pages</a>
+                                    @php
+                                        $cat_childs = \App\Category::where('parent_id', '=', $item->id)->get();
+                                    @endphp
+                                    @if($item->parent_id == 0)
+                                    @if(count($cat_childs) > 0)
+                                    <li class=""><a href="{{url($item->slug)}}">{{$item->name}}</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="catagories-post.html">Catagories</a></li>
-                                            <li><a href="single-post.html">Single Articles</a></li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="catagories-post.html">Catagories</a></li>
-                                                    <li><a href="single-post.html">Single Articles</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                </ul>
-                                            </li>
+                                            @foreach($cat_childs as $c_child)
+                                                <li><a href="{{url($c_child['slug'])}}">{{$c_child['name']}}</a></li>
+                                            @endforeach
                                         </ul>
-                                    </li> -->
+                                    </li>
+                                    @else
+                                    <li class=""><a href="{{url($item->slug)}}">{{$item->name}}</a></li>
+                                    @endif
+                                    @endif
+                                    
+                                    @endforeach
                                 </ul>
                             </div>
                             <!-- Nav End -->
