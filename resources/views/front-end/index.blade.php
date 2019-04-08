@@ -1,3 +1,4 @@
+@section('title', 'Kế toán, Chữ ký số...')
 @extends('front-end.master')
 @section('content')
 <div class="col-12 col-md-6 col-lg-8">
@@ -11,7 +12,7 @@
             <div class="post-data">
                 <a href="{{url($post_large->category->slug)}}" class="post-catagory">{{$post_large->category->name}}</a>
                 <a href="{{url('/post-detail/'.$post_large->slug)}}" class="post-title">
-                    <h6>{{$post_large->name}}</h6>
+                    <h5>{{$post_large->name}}</h5>
                 </a>
                 <div class="post-meta">
                     <!-- <p class="post-author">By <a href="#">Christinne Williams</a></p> -->
@@ -76,7 +77,7 @@ $post = $cat_index->getPost($cat_index->id);
                 <div class="post-data">
                     <a href="{{url('/post-detail/'.$i->slug)}}" class="post-catagory"></a>
                     <a href="{{url('/post-detail/'.$i->slug)}}" class="post-title">
-                        <h6>{{$i->name}}</h6>
+                        <h6>{{str_limit($i->name, 50, '...')}}</h6>
                     </a>
                     <!-- <div class="post-meta d-flex align-items-center">
                         <a href="#" class="post-like"><img src="img/core-img/like.png" alt=""> <span>392</span></a>

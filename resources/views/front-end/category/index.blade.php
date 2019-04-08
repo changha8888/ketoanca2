@@ -10,7 +10,7 @@
         </div>
         <div class="post-data">
             <a href="#" class="post-catagory">{{$post->category->name}}</a>
-            <a href="#" class="post-title">
+            <a href="{{url('/post-detail/'.$post->slug)}}" class="post-title">
                 <h6>{{$post->name}}</h6>
             </a>
             <div class="post-meta">

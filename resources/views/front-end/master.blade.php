@@ -48,7 +48,7 @@
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="/img/core-img/Free_Sample_By_Wix.jpg" alt="" style="max-width: 261px; max-height: 49px"></a>
+                                <a href="/"><img src="/img/core-img/Free_Sample_By_Wix.jpg" alt="" style="max-width: 261px; max-height: 49px"></a>
                             </div>
                         </div>
                     </div>

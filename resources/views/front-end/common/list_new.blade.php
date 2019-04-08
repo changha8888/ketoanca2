@@ -9,7 +9,7 @@
             <a href="{{url($item->category->slug)}}" class="post-catagory">{{$item->category->name}}</a>
             <div class="post-meta">
                 <a href="{{url('/post-detail/'.$item->slug)}}" class="post-title">
-                    <h6>{{$item->name}}</h6>
+                    <h6>{{str_limit($item->name, 70, '...')}}</h6>
                 </a>
                 <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p>
             </div>
