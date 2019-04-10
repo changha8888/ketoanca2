@@ -30,6 +30,7 @@ class CategoryController extends Controller
    	$cate->status = 1;
    	$cate->slug = str_slug($request->name);
       $cate->is_index = isset($request->is_index) ? 1 : 0;
+      $cate->position = isset($request->position) ? $request->position : 0;
    	$cate->save();
       Toastr::success('Thêm thành công', 'Category', ["positionClass" => "toast-top-right"]);
    	return redirect('cks-admin/category/list');
@@ -52,6 +53,7 @@ class CategoryController extends Controller
          $cate->name = $request->name;
          $cate->parent_id = $request->cate_id;
          $cate->is_index = isset($request->is_index) ? 1 : 0;
+         $cate->position = isset($request->position) ? $request->position : 0;
          $cate->save();
       }
       Toastr::success('Sửa thành công', 'Category', ["positionClass" => "toast-top-right"]);

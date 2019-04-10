@@ -19,7 +19,7 @@
     <meta property="og:url" content="@yield('seo_url')" />
 
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('/newspaper/img/core-img/favicon.ico')}}">
+    <link rel="icon" href="{{asset('/img/logo/logo3.jpg')}}">
 
 
     <!-- Core Stylesheet -->
@@ -48,7 +48,7 @@
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="/"><img src="/img/core-img/Free_Sample_By_Wix.jpg" alt="" style="max-width: 261px; max-height: 49px"></a>
+                                <a href="/"><img src="/img/logo/logo3.jpg" alt="" style="max-width: 261px; max-height: 49px"></a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
 
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="/img/core-img/changha.png" alt=""></a>
+                            <!-- <a href="/"><img src="/img/logo/logo3.jpg" alt=""></a> -->
                         </div>
 
                         <!-- Navbar Toggler -->
@@ -165,17 +165,32 @@
                         <div class="footer-widget-area mt-80">
                             <!-- Footer Logo -->
                             <div class="footer-logo">
-                                <a href="index.html"><img src="/img/core-img/Free_Sample_By_Wix.jpg" style="max-width: 261px; max-height: 49px" alt=""></a>
+                                <a href=""><img src="/img/logo/logo1.jpg" style="max-width: 300px; max-height: 80px" alt=""></a>
                             </div>
                             <!-- List -->
                             <ul class="list">
-                                <li><a href="">ketoanca2@gmail.com</a></li>
-                                <li><a href="">0982350930</a></li>
-                                <li><a href="https://ketoanca2.vn">ketoanca2.vn</a></li>
+                                <li><a href="">Chi nhánh Hà Nội</a></li>
+                                <li><a href="">Địa chỉ: Tòa nhà Hanel, số 2 Chùa Bộc, quận Đống Đa, Hà Nội</a></li>
+                                <li><a href="https://ketoanca2.vn">Số điện thoại: 0896635969</a></li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="footer-widget-area mt-80">
+                            <div class="footer-logo">
+                                <a href=""><img src="/img/logo/logo2.png" style="max-width: 300px; max-height: 80px" alt=""></a>
+                            </div>
+
+                            <ul class="list">
+                                <li><a href="">Chi nhánh TP Hồ Chí Minh</a></li>
+                                <li><a href="">Địa chỉ: 96/106 Đường Trục, Phường 13, quận Bình Thạnh, TP HCM</a></li>
+                                <li><a href="https://ketoanca2.vn">Số điện thoại: 0973276799</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>

@@ -64,6 +64,13 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="col-md-7" style="margin-top: 10px">
+                            <div class="col-md-12">
+                                <label for="name">Vị trí hiển thị</label>
+                                <input type="number" name="position" value="" class="form-control">
+                                <!-- /.form-group -->
+                            </div>
+                        </div>
                         
                     </div>
                     <!-- /.box-body -->

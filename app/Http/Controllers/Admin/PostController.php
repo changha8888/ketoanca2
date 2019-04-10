@@ -8,6 +8,7 @@ use App\Post;
 use App\Category;
 use Auth,DateTime,File;
 use Toastr;
+use Validator;
 class PostController extends Controller
 {
     public function index() {
@@ -31,6 +32,15 @@ class PostController extends Controller
                 'content.required'=> 'Nội dung bài viết không được bỏ trống',
                 'cat_id.required'=> 'Danh mục bài viết không được bỏ trống',
             ]);
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'content' => 'required',
+            'cat_id' => 'required'
+        ]);
+        if($validator->fails()){
+             // return back()->withErrors($validator)->withInput();
+                    redirect()->back()->withErrors($validator)->withInput();
+        }
         $file = $request->file('images');
         $post = new Post;
         $post->name = $request->name;

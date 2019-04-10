@@ -29,13 +29,14 @@
 
     <div class="col-12 col-lg-5">
         <!-- Single Featured Post -->
-        @foreach($posts as $post)
+        @foreach($posts as $k=>$post)
         <div class="single-blog-post featured-post-2">
+            @if($k==0)
             <div class="post-thumb">
                 <a href="{{url('/post-detail/'.$post->slug)}}"><img src="{{url('/uploads/news/'.$post->images)}}" alt=""></a>
             </div>
+            @endif
             <div class="post-data">
-                <a href="{{url($post->category->slug)}}" class="post-catagory">{{$post->category->name}}</a>
                 <div class="post-meta">
                     <a href="{{url('/post-detail/'.$post->slug)}}" class="post-title">
                         <h6>{{$post->name}}</h6>

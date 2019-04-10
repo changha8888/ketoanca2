@@ -21,7 +21,7 @@
                         <h3 class="box-title">Add new</h3>
 
                         <div class="box-tools">
-                            <a href="{{url('cks-admin/category/add')}}" class="btn btn-sm btn-primary margin-r-5 margin-l-5">
+                            <a href="{{url('cks-admin/post/add')}}" class="btn btn-sm btn-primary margin-r-5 margin-l-5">
                                 <i class="fa fa-plus"></i> <span>Add</span>
                             </a>
                             <button type="submit" class="btn btn-sm btn-info margin-r-5 margin-l-5">
@@ -34,7 +34,7 @@
                     <div class="box-body">
                             <div class="form-group" style="margin-top: 10px">
                                     <label for="name">Danh mục cha</label>
-                                    <select name="cat_id" class="form-control">
+                                    <select name="cat_id" class="form-control" required="">
                                         <option value="">--- ROOT ---</option>
                                         <?php menuMulti ($cate,0,$str="—") ?>
                                     </select>
@@ -43,30 +43,30 @@
                             <div class="form-group">
                                 <label for="name" class="">Tiêu đề *</label>
                                 <div class="">
-                                    <input type="text" class="form-control" name="name" placeholder="title" value="" required="">
+                                    <input type="text" class="form-control" name="name" placeholder="title" value="{{old('name')}}" required="">
                                 </div>
                             </div>
                             <!-- /.form-group -->
                             <div class="form-group">
                                 <label for="name" class="">Giới thiệu</label>
                                 <div class="">
-                                    <input type="text" class="form-control" name="intro" placeholder="Intro" value="" >
+                                    <input type="text" class="form-control" name="intro" placeholder="Intro" value="{{old('intro')}}" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="">Bài viết nổi bật</label>
                                 <div class="">
-                                    <input type="checkbox" name="is_index" value="1">
+                                    <input type="checkbox" name="is_index" value="1" >
                                 </div>
                             </div>
                             <div class="form-group">
                               <label for="exampleInputFile">Ảnh bài viết</label>
-                              <input type="file" id="exampleInputFile" name="images">
+                              <input type="file" id="exampleInputFile" name="images" value="{{old('images')}}">
                             </div>
 
                             <div class="form-group">
                                     <label for="name">Nội dung</label>
-                                    <textarea class="form-control" id="summary-ckeditor" name="content" required=""></textarea>
+                                    <textarea class="form-control" id="summary-ckeditor" name="content" required="" value="{{old('content')}}"></textarea>
 
                                 <!-- /.form-group -->
                             </div>

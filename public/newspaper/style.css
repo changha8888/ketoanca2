@@ -650,14 +650,15 @@ textarea:focus {
   .single-blog-post.featured-post-2 {
     position: relative;
     z-index: 1;
-    margin-bottom: 15px; }
+    /*margin-bottom: 15px;*/ }
     .single-blog-post.featured-post-2 .post-data {
       padding: 15px 0; }
       .single-blog-post.featured-post-2 .post-data .post-title h6 {
-        font-size: 18px;
+        /*10-04*/
+        /*font-size: 18px;*/
         line-height: 1.55;
-        margin-bottom: 20px;
-        font-weight: 500; }
+        /*margin-bottom: 20px;*/
+        /*font-weight: 500;*/ }
       .single-blog-post.featured-post-2 .post-data .post-author {
         margin-bottom: 15px;
         display: block;
