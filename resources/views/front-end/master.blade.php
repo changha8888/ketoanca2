@@ -42,11 +42,11 @@
 <body>
     <!-- ##### Header Area Start ##### -->
     <div class="adfloat" id="divBannerFloatLeft">
-         <p><a href="" target="_blank"><img src="/newspaper/img/ads/left.png" alt=""></a>
+         <p><a href="https://ketoanca2.vn/post-detail/bao-gia-hoa-don-dien-tu" target="_blank"><img src="/newspaper/img/ads/left.png" alt=""></a>
          </p>
         </div>
         <div class="adfloat" id="divBannerFloatRight">
-         <p><a href="" target="_blank"><img src="/newspaper/img/ads/right.png" alt=""></a>
+         <p><a href="https://ketoanca2.vn/post-detail/bao-gia-chu-ky-so-ca2" target="_blank"><img src="/newspaper/img/ads/right.png" alt=""></a>
          </p>
     </div>
     <header class="header-area">
