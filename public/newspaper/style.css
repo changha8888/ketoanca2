@@ -402,7 +402,7 @@ textarea:focus {
     position: relative;
     width: 100%;
     z-index: 100;
-    height: 80px;
+    height: 50px;
     border-bottom: 1px solid #d0d5d8; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .header-area .newspaper-main-menu {
@@ -414,7 +414,7 @@ textarea:focus {
     .header-area .newspaper-main-menu .classy-nav-container {
       background-color: transparent; }
     .header-area .newspaper-main-menu .classy-navbar {
-      height: 80px;
+      height: 50px;
       padding: 0; }
       @media only screen and (max-width: 767px) {
         .header-area .newspaper-main-menu .classy-navbar {
@@ -1206,7 +1206,7 @@ textarea:focus {
 @media (min-width: 1200px) {
   .container {
     max-width: 940px !important;
-    margin-top: 10px !important;
+    /* margin-top: 10px !important; */
   }
 }
 

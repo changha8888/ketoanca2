@@ -1,4 +1,4 @@
-<div class="col-12 col-md-6 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4" style="margin-top: 15px;">
     <!-- Single Featured Post -->
     @foreach($list_news as $item)
     <div class="single-blog-post small-featured-post d-flex">
