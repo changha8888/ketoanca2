@@ -25,9 +25,10 @@ class HomeController extends Controller
      */
     public function common_var () {
         $cate = Category::all();
+        $list_bao_gia = Post::where('cat_id', 28)->orderBy('created_at', 'desc')->take(2)->get();
         $list_news = Post::orderBy('created_at', 'desc')->take(6)->get();
         $result = array(
-            "cate"=>$cate, 'list_news' => $list_news);
+            "cate"=>$cate, 'list_news' => $list_news, 'list_bao_gia' => $list_bao_gia);
         return $result;
     }
     public function list_news () {
