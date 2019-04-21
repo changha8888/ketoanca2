@@ -59,7 +59,7 @@
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="/"><img src="/images/chukyso-ca.png" alt="" ></a>
+                                <a href="/"><img src="/images/banner.png" alt="" ></a>
                             </div>
                         </div>
                     </div>
