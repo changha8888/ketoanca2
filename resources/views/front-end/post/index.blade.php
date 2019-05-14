@@ -36,7 +36,7 @@
             <div class="col-12 col-md-6">
                 <div class="single-blog-post style-3 mb-80">
                     <div class="post-thumb">
-                        <a href="#"><img src="{{url('/uploads/news/'.$item->images)}}" alt=""></a>
+                        <a href="{{url('/post-detail/'.$item->slug)}}"><img src="{{url('/uploads/news/'.$item->images)}}" alt=""></a>
                     </div>
                     <div class="post-data">
                         <a href="{{url($item->category->slug)}}" class="post-catagory">{{$item->category->name}}</a>
