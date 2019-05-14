@@ -5,14 +5,15 @@
 <div class="blog-posts-area">
     @foreach($posts as $post)
     <div class="single-blog-post featured-post mb-30">
+        <a href="{{url('/post-detail/'.$post->slug)}}" class="post-title">
+                <h5>{{$post->name}}</h5>
+            </a>
         <div class="post-thumb">
-            <a href="{{url('/post-detail/'.$post->slug)}}"><img src="{{url('/uploads/news/'.$post->images)}}" alt=""></a>
+            <a href="{{url('/post-detail/'.$post->slug)}}"><img class="category" src="{{url('/uploads/news/'.$post->images)}}" alt=""></a>
         </div>
         <div class="post-data">
-            <a href="#" class="post-catagory">{{$post->category->name}}</a>
-            <a href="{{url('/post-detail/'.$post->slug)}}" class="post-title">
-                <h6>{{$post->name}}</h6>
-            </a>
+            <!-- <a href="#" class="post-catagory">{{$post->category->name}}</a> -->
+            
             <div class="post-meta">
                 <p class="post-excerp">{{$post->intro}}</p>
                 <!-- Post Like & Post Comment -->

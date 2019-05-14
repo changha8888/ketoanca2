@@ -73,6 +73,7 @@ ol {
   ol li {
     list-style: none; }
 
+
 img {
   height: auto;
   max-width: 100%; }
@@ -1210,4 +1211,14 @@ textarea:focus {
     /* margin-top: 10px !important; */
   }
 }
-
+.post-thumb .category {
+  float: left;
+  max-width: 30% !important;
+  margin-right: 10px;
+}
+.post-data .post-title {
+  font-size: 14px !important;
+}
+.post-meta .post-excerp {
+  margin-top: -30px;
+}

@@ -11,7 +11,7 @@
                 <a href="{{url('/post-detail/'.$item->slug)}}" class="post-title">
                     <h6>{{str_limit($item->name, 70, '...')}}</h6>
                 </a>
-                <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p>
+                <!-- <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p> -->
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                 <a href="{{url('/post-detail/'.$item->slug)}}" class="post-title">
                     <h6>{{str_limit($item->name, 70, '...')}}</h6>
                 </a>
-                <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p>
+                <!-- <p class="post-date"><span>{{$item->created_at->format('d/m/y')}}</span></p> -->
             </div>
         </div>
     </div>
